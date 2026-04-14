@@ -1,0 +1,114 @@
+.Branded-slider-section {
+    padding: 30px 20px;
+    background: #fff;
+  }
+  
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2a2a2a;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b 0%, #ff8e53 100%);
+    border-radius: 4px;
+    animation: underlinePulse 3s infinite;
+  }
+  
+  
+  .slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 40px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .product-card {
+    flex: 0 0 auto;
+    width: 200px;
+    border-radius: 12px;
+    padding: 15px;
+    background: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    position: relative;
+    scroll-snap-align: start;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .price-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #00bfff;
+    color: white;
+    font-size: 13px;
+    padding: 4px 10px;
+    border-radius: 50px;
+    font-weight: 500;
+  }
+  
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ffffff;
+    border: none;
+    font-size: 30px;
+    padding: 8px 12px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .scroll-btn.left {
+    left: 0;
+  }
+  
+  .scroll-btn.right {
+    right: 0;
+  }
+  .slider-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 40px;
+    scroll-snap-type: x mandatory;
+  
+    /* Scrollbar hiding */
+    scrollbar-width: none;            /* Firefox */
+    -ms-overflow-style: none;         /* IE & Edge */
+  }
+  
+  .slider-container::-webkit-scrollbar {
+    display: none;                    /* Chrome, Safari */
+  }
+  
+  
+  

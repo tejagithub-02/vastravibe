@@ -1,0 +1,243 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.header {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  background: linear-gradient(135deg, #1E3A8A 0%, #3B82F6 100%);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Inter', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.logo-img {
+  height: 100%;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+
+/* Logo Block */
+.logo-block {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  gap: 12px;
+}
+
+
+
+.site-title {
+  font-size: 1.8rem;
+  font-weight: 550px;
+  color: white;
+  text-transform: uppercase;
+  font-family: '';
+  letter-spacing: 1px;
+}
+
+/* Right Section */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Nav Links */
+.icon-label {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  gap: 6px;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+.icon-label:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #FBBF24;
+  transform: translateY(-2px);
+}
+
+/* Icon */
+.icon {
+  font-size: 1.2rem;
+}
+
+/* Menu Toggle */
+.menu-toggle {
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  width: 42px;
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+/* Side Menu Overlay */
+.side-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
+/* Side Menu */
+.side-menu {
+  background: white;
+  width: 280px;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.side-menu.slide-in {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Side Menu Items */
+.side-menu a {
+  color: #1f2937;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 8px;
+  border-radius: 6px;
+}
+
+.side-menu a:hover {
+  background: #3B82F6;
+  color: white;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 28px;
+  font-weight: bold;
+  align-self: flex-end;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Offer Slider */
+.offer-slider {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(4px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.offer-track {
+  display: flex;
+  animation: scrollOffers 25s linear infinite;
+  gap: 24px;
+  padding-left: 20px;
+}
+
+.offer-card {
+  background: linear-gradient(45deg, #3B82F6, #60A5FA);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: scale(1.05);
+}
+
+@keyframes scrollOffers {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive Visibility */
+.large-only {
+  display: flex;
+}
+
+.small-only {
+  display: none;
+}
+ 
+@media (min-width: 992px) {
+  .logo-block {
+    margin-left: 50px; /* shift logo block right */
+  }
+
+  .right-section {
+    margin-right: 100px; /* shift nav links left */
+  }
+}
+
+@media (max-width: 991px) {
+  .large-only {
+    display: none;
+  }
+  .small-only {
+    display: flex;
+  }
+
+  .logo-img {
+    height: 100px;
+  }
+
+  .site-title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo-img {
+    height: 100px;
+  }
+
+  .site-title {
+    font-size: 1.1rem;
+  }
+
+  .right-section {
+    gap: 8px;
+  }
+}

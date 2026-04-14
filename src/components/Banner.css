@@ -1,0 +1,78 @@
+.banner-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 250px; /* adjusted */
+  overflow: hidden;
+}
+
+/* Default (large desktops ≥1200px) - DECREASED height */
+.banner-carousel::before {
+  content: '';
+  display: block;
+  padding-top: 40%; /* reduced from 40% */
+}
+
+.banner-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 0;
+  max-height: 600px; /* decreased from 720px */
+}
+
+.banner-img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* ===== Responsive Breakpoints ===== */
+
+/* Laptops/Tablets (992px - 1199px) - INCREASED */
+@media (max-width: 1199px) {
+  .banner-carousel::before {
+    padding-top: 40%; /* previously 40% */
+  }
+
+  .banner-img {
+    max-height: 600px;
+  }
+}
+
+/* Tablets (768px - 991px) - INCREASED */
+@media (max-width: 991px) {
+  .banner-carousel::before {
+    padding-top: 55%; /* previously 50% */
+  }
+
+  .banner-img {
+    max-height: 520px;
+  }
+}
+
+/* Small Devices (≤ 767px) - INCREASED */
+@media (max-width: 767px) {
+  .banner-carousel::before {
+    padding-top: 70%; /* previously 60% */
+  }
+
+  .banner-img {
+    max-height: 450px;
+  }
+}
+
+/* Extra Small Phones (≤ 480px) - INCREASED */
+@media (max-width: 480px) {
+  .banner-carousel::before {
+    padding-top: 85%; /* previously 70% */
+  }
+
+  .banner-img {
+    max-height: 380px;
+  }
+}
