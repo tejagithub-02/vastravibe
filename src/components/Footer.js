@@ -46,7 +46,8 @@ const Footer = () => {
   <h4>Contact</h4>
   <p>
     VastraVibe india<br />
-    <span className="footer-email">✉️ <a href="">vastravibe00@gmail.com</a></span>
+    <span className="footer-email">✉️ <a href="mailto:vastravibe2026@gmail.com">vastravibe00@gmail.com</a>
+</span>
     <span className="footer-phone">📞 <a href="tel:90XXXXXX90">90XXXXXX90</a></span><br />
   </p>
 </div>
